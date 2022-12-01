@@ -31,7 +31,8 @@ def part2():
             currCalorieCount += int(line)
             for i in range(len(bestCalories)):
                 if currCalorieCount > bestCalories[i]:
-                    bestCalories.insert(i, currCalorieCount) # doubly linked list would be more efficient as k grows
+                    # doubly linked list would be more efficient as k grows
+                    bestCalories.insert(i, currCalorieCount)
                     bestCalories.pop()
                     break
     print(sum(bestCalories))
